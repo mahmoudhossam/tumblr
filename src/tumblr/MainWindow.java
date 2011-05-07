@@ -5,10 +5,7 @@
  */
 package tumblr;
 
-import javax.swing.JOptionPane;
-import javax.swing.JTabbedPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -241,6 +238,10 @@ public class MainWindow extends javax.swing.JFrame {
             case AUDIO:
                 // TODO invoke audio method
                 break;
+        }
+        String posted = backend.doPost();
+        if(posted != null && posted.isEmpty() == false){
+            JOptionPane.showMessageDialog(null, "Posted successfully!");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
