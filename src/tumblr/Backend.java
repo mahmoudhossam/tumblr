@@ -40,7 +40,7 @@ public class Backend {
         try {
             post = tumblr.post(map);
         } catch (IOException ex) {
-            System.err.println(ex.getMessage());
+            System.out.println(ex.getMessage());
         }
         return post;
     }
